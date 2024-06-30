@@ -22,7 +22,7 @@ public class Usuario implements Serializable{
 	@Column(nullable = false, length =100)
 	private String username;
 	@Column(nullable = false, length =10)
-	private String password;
+	private String pass;
 	private Boolean activo;
 	
 	//G&S	
@@ -50,11 +50,11 @@ public class Usuario implements Serializable{
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getPassword() {
-		return password;
+	public String getPass() {
+		return pass;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
 	public Boolean getActivo() {
 		return activo;
