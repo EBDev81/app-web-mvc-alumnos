@@ -27,7 +27,7 @@ public class Alumno implements Serializable{
 	private String dni;
 	private String fecha_nac;
 	
-	
+	//G&S
 	public long getId() {
 		return id;
 	}

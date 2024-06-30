@@ -21,6 +21,11 @@ public class AlumnoServiceimpl implements AlumnoService{
 	}
 	
 	@Override
+	public Alumno obtenerAlumno(Long id) {
+		return alumnoRepository.findById(id).get();
+	}
+	
+	@Override
 	public List<Alumno> listaAlumno(String dato) {
 		if(dato != null) {
 			return alumnoRepository.filterName(dato);

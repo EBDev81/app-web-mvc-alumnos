@@ -11,4 +11,12 @@ public interface AlumnoService {
 	 //metodo para guardar nuevo alumno
     public Alumno guardarAlumno(Alumno alumno);	
 
+    //metodo para obtener alumno por id
+    public Alumno obtenerAlumno(Long id);
+    
+  //metodo para actualizar un alumno
+   // public Alumno actualizarAlumno(Alumno alumno);
+    
+    //metodo para eliminar un alumno
+    //public void eliminarAlumno(Long id);
 }
