@@ -16,6 +16,11 @@ public class AlumnoServiceimpl implements AlumnoService{
 	private AlumnoRepository alumnoRepository;
 
 	@Override
+	public Alumno guardarAlumno(Alumno alumno) {
+		return alumnoRepository.save(alumno);
+	}
+	
+	@Override
 	public List<Alumno> listaAlumno(String dato) {
 		if(dato != null) {
 			return alumnoRepository.filterName(dato);

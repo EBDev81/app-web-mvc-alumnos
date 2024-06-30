@@ -4,8 +4,11 @@ import java.util.List;
 
 import io.keepcoding.app.web.alumnos.entity.Alumno;
 
-
 public interface AlumnoService {
 	//metodo que devuelve una lista de Alumnos
-		List<Alumno> listaAlumno(String dato);
+	List<Alumno> listaAlumno(String dato);
+
+	 //metodo para guardar nuevo alumno
+    public Alumno guardarAlumno(Alumno alumno);	
+
 }
