@@ -10,7 +10,7 @@ import io.keepcoding.app.web.alumnos.entity.Alumno;
 import io.keepcoding.app.web.alumnos.entity.Usuario;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Alumno, Long>{
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 
 	@Query("SELECT p FROM Usuario p WHERE p.nombre LIKE %:nombre%")
 	public List<Usuario> filterName(String nombre);
