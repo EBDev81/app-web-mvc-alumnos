@@ -34,4 +34,14 @@ public class UsuarioServiceimpl implements UsuarioService{
 			return usuarioRepository.findAll();
 		}
 	}
+	
+	@Override
+	public Usuario autenticarUsuario(String username, String pass) {
+	    List<Usuario> usuarios = usuarioRepository.findByUsernameAndPass(username, pass);
+	    if (usuarios.isEmpty()) {
+	        return null;
+	    } else {
+	        return usuarios.get(0);
+	    }
+	}
 }

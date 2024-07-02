@@ -14,4 +14,7 @@ public interface UsuarioService {
     //metodo para obtener alumno por id
     public Usuario obtenerUsuario(Long id);
 
+    // Método para autenticar usuario
+    public Usuario autenticarUsuario(String username, String pass);
+
 }
