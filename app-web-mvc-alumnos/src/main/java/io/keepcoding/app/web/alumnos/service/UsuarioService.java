@@ -8,10 +8,10 @@ public interface UsuarioService {
 	//metodo que devuelve una lista de Usuarios
 	List<Usuario> listaUsuario(String dato);
 
-	 //metodo para guardar nuevo alumno
+	 //metodo para guardar nuevo usuario
     public Usuario guardarUsuario(Usuario usuario);	
 
-    //metodo para obtener alumno por id
+    //metodo para obtener usuario por id
     public Usuario obtenerUsuario(Long id);
 
     // Método para autenticar usuario

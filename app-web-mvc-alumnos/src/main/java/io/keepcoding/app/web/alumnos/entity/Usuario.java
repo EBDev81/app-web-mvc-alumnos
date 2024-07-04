@@ -23,7 +23,8 @@ public class Usuario implements Serializable{
 	private String username;
 	@Column(nullable = false, length =10)
 	private String pass;
-	private Boolean activo;
+	@Column(nullable = false)
+	private Boolean activo = true;
 	
 	//G&S	
 	public long getId() {

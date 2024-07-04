@@ -38,51 +38,43 @@
 
 	<div class="container">
 		<div class="row">
-			<h1>Lista de Alumnos</h1>
+			<div
+				class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center">Registro de Usuarios</h1>
+				<div class="card-body">
+					<form th:action="@{/usuarios/crear_usuario}" method="POST"
+						th:object="${usuario}">
+						<div class="form-group">
+							<label> Nombre:</label> <input type="text" name="nombre"
+								th:field="*{nombre}" class="form-control"
+								placeholder="Indique su nombre" required>
+						</div>
+						<div class="form-group">
+							<label> Username:</label> <input type="text" name="username"
+								th:field="*{username}" class="form-control"
+								placeholder="Ingrese un nombre de usuario" required>
+						</div>
+						<div class="form-group">
+							<label> Password:</label> <input type="password" name="pass"
+								th:field="*{pass}" class="form-control"
+								placeholder="Indique una contraseña" required>
+						</div>
+						<div class="form-group">
+							<label> Email:</label> <input type="email" name="email"
+								th:field="*{email}" class="form-control"
+								placeholder="Introduzca su correo electrónico" required>
+						</div>
+						<!-- Campo oculto para activo -->
+						<input type="hidden" name="activo" th:field="*{activo}"
+							value="true"> <br>
+
+						<div class="-footer">
+							<button class="btn btn-info">Guardar</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
-
-		<form class="row g-3" th:action="@{/alumnos}">
-			<div class="col-auto">
-				<label for="staticEmail2" class="visually-hidden">Filtro</label> <input
-					type="text" class="form-control-plaintext"
-					placeholder="Ingrese su búsqueda" th:value="${datoBuscado}"
-					name="datoBuscado">
-			</div>
-			<div class="col-auto">
-				<button type="submit" class="btn btn-primary mb-3">Buscar</button>
-			</div>
-			<div class="col-auto">
-				<button type="button" onclick="window.location.href = '/alumnos';"
-					class="btn btn-danger mb-3">Limpiar</button>
-			</div>
-		</form>
-
-		<table class="table">
-			<thead class="table-dark">
-				<tr>
-					<th scope="col">#</th>
-					<th scope="col">Nombre</th>
-					<th scope="col">Apellido</th>
-					<th scope="col">Teléfono</th>
-					<th scope="col">Email</th>
-					<th scope="col">Dni</th>
-					<th scope="col">Fecha_nac</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="alum: ${alumno}">
-					<th th:text="${alum.id}" scope="row"></th>
-					<td th:text="${alum.nombre}"></td>
-					<td th:text="${alum.apellido}"></td>
-					<td th:text="${alum.telefono}"></td>
-					<td th:text="${alum.email}"></td>
-					<td th:text="${alum.dni}"></td>
-					<td th:text="${alum.fecha_nac}"></td>
-					<td>
-				</tr>
-
-			</tbody>
-		</table>
 	</div>
 
 	<script

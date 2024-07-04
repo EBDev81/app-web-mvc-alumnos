@@ -42,4 +42,20 @@ public class UsuarioController {
             return "login";  // Permanecer en la página de login si la autenticación falla
         }
     }
+    
+    //Crear usuario
+    
+    @GetMapping("/usuarios/crear_usuario")
+    public String newUsuarioForm(Model modelo) {
+    	Usuario usuario = new Usuario();
+    	modelo.addAttribute("usuario", usuario);
+    	return "crear_usuario";
+    }
+    
+    @PostMapping("/usuarios/crear_usuario")
+	public String guardarUsuario(@ModelAttribute("usuario") Usuario usuario) {
+		usuarioService.guardarUsuario(usuario);
+		return "redirect:/usuarios";
+	}
+
 }

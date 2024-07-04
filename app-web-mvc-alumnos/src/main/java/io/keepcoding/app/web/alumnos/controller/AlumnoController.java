@@ -25,8 +25,8 @@ public class AlumnoController {
 	
 	@GetMapping("/alumnos/crear_alumno")
 	public String newAlumnoForm(Model modelo) {
-		Alumno empleado = new Alumno();
-		modelo.addAttribute("alumno", empleado);
+		Alumno alumno = new Alumno();
+		modelo.addAttribute("alumno", alumno);
 		return "crear_alumno";
 	}
 	
