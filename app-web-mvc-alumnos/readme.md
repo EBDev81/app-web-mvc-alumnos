@@ -3,7 +3,7 @@
 Esto es una práctica para el módulo Spring Boot desde cero del Bootcamp Cero de Keepcoding.
 
 App Web Alumnos es una aplicación web desarrollada con Spring Boot para la gestión de alumnos y usuarios. 
-Proporciona funcionalidades como crear, listar, actualizar y eliminar alumnos y usuarios, así como autenticación de usuarios.
+Proporciona funcionalidades como crear, listar y actualizar alumnos y crear usuarios, así como autenticación de usuarios.
 
 ## Requisitos
 
@@ -25,7 +25,7 @@ cd app-web-alumnos
 Crea una base de datos MySQL.
 
 ```sql
-CREATE DATABASE app_web_alumnos;
+CREATE DATABASE bd_web_spring_alumnos;
 ```
 
 Configura las credenciales de la base de datos en `src/main/resources/application.properties`.
