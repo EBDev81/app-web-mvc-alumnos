@@ -5,6 +5,10 @@ Esto es una práctica para el módulo Spring Boot desde cero del Bootcamp Cero d
 App Web Alumnos es una aplicación web desarrollada con Spring Boot para la gestión de alumnos y usuarios. 
 Proporciona funcionalidades como crear, listar y actualizar alumnos y crear usuarios, así como autenticación de usuarios.
 
+## Tecnologías
+
+-SpringBoot -Java -Thymeleaf -Maven -MySQL -Bootstrap -HTML -CSS -JavaScript
+
 ## Requisitos
 
 - Java 11 o superior
